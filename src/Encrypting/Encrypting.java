@@ -37,5 +37,6 @@ public class Encrypting {
     } else {
       asciiEncrypt = 0;
     }
+    System.out.println(asciiEncrypt);
   }
 }
