@@ -82,15 +82,6 @@ public class UserInterface {
     whatNowMenu1();
   }
 
-  void caesarEncrypting() {
-
-    System.out.print("Enter text to encrypt: ");
-   /* String encryptCaesar = in.nextLine();
-    System.out.println("Output: " + encryptCaesar);*/
-
-  }
-
-
   void vigenere() {
 
   }
@@ -135,7 +126,7 @@ public class UserInterface {
       case 1:
         caesarDecryptMenu();
       case 2:
-        caesarEncrypting();
+        caesarEncryptMenu();
       default:
         userInterfaceStart();
     }
