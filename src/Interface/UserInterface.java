@@ -26,6 +26,7 @@ public class UserInterface {
     Scanner in = new Scanner(System.in);
     System.out.print("Type your decision: ");
     int inputNumberStart = in.nextInt();
+    System.out.println();
     return inputNumberStart;
   }
 
@@ -38,10 +39,10 @@ public class UserInterface {
     switch (inputNumberStart) {
       case 1:
         caesarEncryptMenu();
-      /*case 2:
-        decryptMenu();*/
+      case 2:
+        caesarDecryptMenu();
       default:
-        //userInterfaceStart();
+        userInterfaceStart();
     }
   }
 
@@ -52,6 +53,15 @@ public class UserInterface {
     text = text.toUpperCase();
     System.out.print("You entered: " + text);
     return text;
+  }
+
+  String enterDecryptText() {
+    Scanner in = new Scanner(System.in);
+    System.out.print("Type code text: ");
+    String decryptText = in.nextLine();
+    decryptText = decryptText.toUpperCase();
+    System.out.print("You entered: " + decryptText);
+    return decryptText;
   }
 
   int shiftValue() {
@@ -80,23 +90,21 @@ public class UserInterface {
 
   }
 
-  void number() {
-
-  }
 
   void vigenere() {
 
   }
 
   void caesarDecryptMenu() {
-    System.out.println("1) \tNew Text");
-    System.out.println("2) \tDecrypt");
-    System.out.println("3) \tMain menu");
-    int inputNumber = userInputDecision();
-    switch (inputNumber) {
-      case 1:
+    System.out.println("Caesar Decrypting");
+    String inputDecryptTextCaesar = enterDecryptText();
+    int shiftValueCaesar = shiftValue();
+    //TODO decrypting method
+    System.out.println("Code text is: " + inputDecryptTextCaesar );
+    System.out.println();
+    whatNowMenu2();
 
-    }
+
   }
 
   void whatNowMenu1() {
@@ -111,6 +119,23 @@ public class UserInterface {
         caesarEncryptMenu();
       case 2:
         caesarDecryptMenu();
+      default:
+        userInterfaceStart();
+    }
+  }
+
+  void whatNowMenu2() {
+    System.out.println("Decide what to do now: \n");
+    System.out.println("1) \tNew CodeText");
+    System.out.println("2) \tEncrypt");
+    System.out.println("0) \tMain menu");
+
+    int inputNumberStart = userInputDecision();
+    switch (inputNumberStart) {
+      case 1:
+        caesarDecryptMenu();
+      case 2:
+        caesarEncrypting();
       default:
         userInterfaceStart();
     }
