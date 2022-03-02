@@ -39,4 +39,5 @@ public class Encrypting {
     }
     System.out.println(asciiEncrypt);
   }
+
 }

@@ -34,7 +34,7 @@ public class Decrypting {
     } else {
       charNumber = 0;
     }
-    System.out.println(charNumber);
+    System.out.println((char)charNumber);
   }
 }
 
